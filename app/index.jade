@@ -1,0 +1,26 @@
+extends layout
+
+block vars
+  - var show_header = false
+  - var show_footer = false
+  - var header_class = 'header-white'
+  - var footer_class = 'footer-white'
+
+block content
+  .main-screen
+    .text-layer
+      .text-writing
+    .images-layer
+      .image-origami
+    .gradient-layer
+      .gradient-green
+    .info-layer
+      include header
+      .main-abs-info
+        .wrapper
+          .main-info
+            .title АНАЛИТИКА. ДИЗАЙН. ТЕХНОЛОГИИ.
+            .desc Мы занимаемся разработкой сайтов и мобильных приложений, продвижением в социальных медиа, поддержкой и сопровождением бизнеса онлайн.
+            .btn-cont 
+              a(href="#").us-btn Наши работы 
+      include footer

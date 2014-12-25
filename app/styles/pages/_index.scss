@@ -1,0 +1,111 @@
+.main-screen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #ccc;
+	color: #fff;
+
+	.info-layer,
+	.gradient-layer,
+	.gradient-layer > div,
+	.images-layer,
+	.images-layer > div,
+	.text-layer,
+	.text-layer > div {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.text-layer {
+		z-index: 1;
+
+		.text-writing {
+			background-image: url('../images/text-layer/writing.png');
+			background-repeat: no-repeat;
+			background-position: right center;
+		}
+	}
+
+	.images-layer {
+		z-index: 2;
+
+		.image-origami {
+			background-image: url('../images/images-layer/origami.png');
+			background-repeat: no-repeat;
+			background-position: 10% center;
+		}
+	}
+
+	.gradient-layer {
+		z-index: 3;
+		opacity: .8;
+	}
+
+	.info-layer {
+		z-index: 4;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.main-abs-info {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			box-sizing: border-box;
+			padding-bottom: 140px;
+
+			.wrapper {
+				position: relative;
+				height: 100%;
+			}		
+		}
+
+		.main-info {
+			position: absolute;
+			bottom: 30px;
+			max-width: 620px;
+
+			.title {
+				font-weight: 900;
+				font-size: 46px;
+			}
+
+			.desc {
+				line-height: 1.4;
+				margin-top: 10px;
+			}
+
+			.btn-cont {
+				margin-top: 25px;
+			}
+
+			.us-btn {
+				height: 55px;
+				line-height: 55px;
+				padding: 0 35px;
+			}
+		}
+
+		.main-footer, .main-header {
+			z-index: 2;
+		}
+
+		.main-footer {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+		
+}

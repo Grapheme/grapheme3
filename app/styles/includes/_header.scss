@@ -1,0 +1,75 @@
+.main-header {
+	position: relative;
+	height: 140px;
+	line-height: 140px;
+
+	.logo {
+		font-family: 'futurademicregular';
+		display: inline-block;
+		vertical-align: middle;
+		color: #64cdaf;
+		font-size: 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.main-nav {
+		display: inline-block;
+		vertical-align: middle;
+		float: right;
+
+		ul {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: normal;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			color: #3a3a3a;
+			font-size: 12px;
+			font-weight: 300;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0 15px;
+			border: 2px solid transparent;
+			border-radius: 3px;
+			height: 30px;
+			line-height: 30px;
+
+			&:hover, &.active {
+				border-color: #14c4b2;
+			}
+		}
+	}
+
+	&.header-white {
+		.logo {
+			color: #fff;
+		}
+
+		.main-nav {
+			a {
+				color: #fff;
+
+				&:hover, &.active {
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}

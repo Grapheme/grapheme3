@@ -1,0 +1,10 @@
+.gradient-green {
+	background: rgb(55,189,172); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(55,189,172,1) 0%, rgba(59,173,191,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(55,189,172,1)), color-stop(100%,rgba(59,173,191,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(55,189,172,1) 0%,rgba(59,173,191,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(55,189,172,1) 0%,rgba(59,173,191,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(55,189,172,1) 0%,rgba(59,173,191,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(55,189,172,1) 0%,rgba(59,173,191,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37bdac', endColorstr='#3badbf',GradientType=1 ); /* IE6-9 */
+}
