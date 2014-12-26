@@ -27,7 +27,7 @@
 		}
 	}
 	.portfolio-pict {
-		transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+		transition: all .4s ease;
 
 		@include position(absolute, 0px 0px 0px 0px);
 		z-index: 0;
