@@ -1,0 +1,160 @@
+.partners {
+	padding: 0 0 80px;
+
+	.p {
+		margin: 0 0 1rem;
+	}
+
+	.partners-ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		margin: 2rem 0 0;
+	}
+	.partners-li {
+		display: inline-block;
+		margin: 0 46px 0 0;
+
+		img {
+			vertical-align: sub;
+		}
+	}
+}
+
+.clients {
+	.wrapper {
+		margin: 0 auto;
+	}
+	.clients-ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		border: 1px solid #ddd;		
+	}
+	.clients-li {
+		float: left;
+		position: relative;
+		width: 33.333333%;
+		height: 198px;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: no-repeat center center;
+
+		box-sizing: border-box;
+
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:nth-child(3n) {
+			border-right: none;
+		}
+		&:nth-child(n+4) {
+			border-bottom: none;
+		}
+
+		&.infinity {
+			background-image: url(../images/clients/01.png);
+		}
+		&.unilever {
+			background-image: url(../images/clients/02.png);
+		}
+		&.rutech {
+			background-image: url(../images/clients/03.png);
+		}
+		&.upc {
+			background-image: url(../images/clients/04.png);
+		}
+		&.arredamenti {
+			background-image: url(../images/clients/05.png);
+		}
+		&.ciml {
+			background-image: url(../images/clients/06.png);		
+		}
+	}
+}
+
+.prods-ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.prods-li {
+
+	box-sizing: border-box;
+
+	position: relative;
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 67px;
+	padding: 0 60px 0 140px;
+
+	&:nth-child(2n-1) {
+		margin-right: 50%;
+	}
+
+	&:nth-child(2n) {
+		margin-left: 50%;
+	}
+
+	.prod-li-name {
+		margin: 0 0 16px;
+
+		font-size: 18px;
+		line-height: .75;
+		font-weight: 700;
+	}
+	.prod-li-desc {
+		font-size: 15px;
+		line-height: 21 / 15;
+		font-weight: 300;
+	}
+	.prod-li-pict {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 115px;
+		height: 100%;
+
+		background: no-repeat top right;
+
+		&.sites {
+			background-image: url(../images/prod/01.png);	
+		}
+		&.mapps {
+			background-image: url(../images/prod/02.png);
+		}
+		&.seo {
+			background-image: url(../images/prod/03.png);
+		}
+		&.smm {
+			background-image: url(../images/prod/04.png);
+		}
+		&.ux {
+			background-image: url(../images/prod/05.png);
+		}
+		&.supp {
+			background-image: url(../images/prod/06.png);
+		}
+		&.ecomm {
+			background-image: url(../images/prod/07.png);
+		}
+		&.emailm {
+			background-image: url(../images/prod/08.png);
+		}
+		&.brand {
+			background-image: url(../images/prod/09.png);
+		}
+		&.creative {
+			background-image: url(../images/prod/10.png);
+		}
+
+	}
+}

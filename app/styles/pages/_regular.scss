@@ -111,6 +111,20 @@
         }
       }
     }
+
+    &.about {
+      .wrapper {
+        .unit {
+          border-color: #5ac7c2;
+
+          h3 {
+            &:before {
+              background: #5ac7c2;
+            }
+          }
+        }
+      }
+    }
   }
   &.white {
     background: white;
