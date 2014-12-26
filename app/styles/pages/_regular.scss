@@ -32,7 +32,9 @@
   line-height: 1.4;
   font-family: "museo_sans_cyrl";
   font-weight: 300;
-  padding-top: 74px;
+  //padding-top: 74px;
+  padding-bottom: 102px;
+  border-top: 1px solid transparent;
   h2 {
     font-size: 36px;
     color: rgb(57, 57, 57);
@@ -40,29 +42,94 @@
     text-align: center;
     font-weight: 100;
   }
+  .sub-header {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(57, 57, 57);
+    line-height: 1.5;
+    margin-top: -20px;
+    margin-bottom: 46px;
+  }
   .wrapper {
-    padding: 0 30px;
+    padding: 0 15px;
     margin: 0 auto;
+    margin-top: 74px;
+    width: 1010px;
     .row {
-      margin: 0 -30px;
+      margin: 0 -15px;
+    }
+    .unit {
+      float: left;
     }
   }
-  &.white {
-    background: white;
-    &.col-2 {
-      .wrapper {
-        width: 1010px;
-        .col {
-          width: 475px;
-          margin: 0 30px;
-          float: left;
+  &.col-3 {
+    .wrapper {
+      .unit {
+        width: 310px;
+        margin: 0 15px;
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: -8px;
         }
       }
     }
   }
+  &.col-2 {
+    .wrapper {
+      .unit {
+        width: 475px;
+        margin: 0 15px;
+      }
+    }
+  }
+  &.bordered {
+    .wrapper {
+      .unit {
+        border: 2px solid #59a7cb;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 8px; 
+        box-sizing: border-box;
+        height: 320px;
+        margin-bottom: 30px;
+        h3 {
+          font-weight: 700;
+          font-size: 22px;
+          position: relative;
+          color: #3a3a3a;
+          margin-bottom: 36px;
+          &:before {
+            width: 94px;
+            height: 2px;
+            background: #59a7cb;
+            position: absolute;
+            content: '';
+            display: block;
+            bottom: -20px;
+          }
+        }
+      }
+    }
+  }
+  &.white {
+    background: white;
+  }
   &.grey {
     background: #f5f5f5;
-    
+    border-top: 1px solid #dddddd;
+  }
+  &.colorize {
+    @include linear-gradient(45deg, #6368bd, #3badbf);
+    padding-top: 36px;
+    p {
+      color: white;
+      font-size: 24px;
+      line-height: 36px;
+      width:  760px;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }
 
