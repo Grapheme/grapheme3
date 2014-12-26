@@ -1,5 +1,15 @@
 extends layout
 
-block vars
-
 block content
+	main
+		- var projects = [{ header: 'Infinity', desc: 'Роскошь во всех измерениях' }, { header: 'St.Tropez', desc: 'Новый формат отдыха' },  { header: 'Даховская слобода', desc: 'Отдых в Адыгее' }, { header: 'People-around.ru', desc: 'Создавать события — наша работа' }, { header: 'Солнечный', desc: 'Семейный загородный клуб' }, { header: 'QoobRoom', desc: 'Живые стены у вас дома' }, { header: 'Wokit.ru', desc: 'Азиатская еда с удобной заставкой' }, { header: 'Швейная лавка', desc: 'Услуги по ремонту одежды' }]
+			ul.portfolio-list.clearfix
+				each project, index in projects
+					li.portfolio-item
+						.portfolio-item-cont
+							.portfolio-pict
+							.portfolio-desc
+								h2 #{project.header}
+								.desc #{project.desc}
+								a.proj-link(href="#")
+									Посмотреть проект

@@ -115,7 +115,8 @@ gulp.task('watch', ['connect'], function () {
     '.tmp/*.html',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
-    'app/images/**/*'
+    'app/images/**/*',
+    'app/*.jade'
   ]).on('change', $.livereload.changed);
 
   gulp.watch('app/**/*.jade', ['views']);
