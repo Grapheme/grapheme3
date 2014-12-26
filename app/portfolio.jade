@@ -2,14 +2,75 @@ extends layout
 
 block content
 	main
-		- var projects = [{ header: 'Infinity', desc: 'Роскошь во всех измерениях' }, { header: 'St.Tropez', desc: 'Новый формат отдыха' },  { header: 'Даховская слобода', desc: 'Отдых в Адыгее' }, { header: 'People-around.ru', desc: 'Создавать события — наша работа' }, { header: 'Солнечный', desc: 'Семейный загородный клуб' }, { header: 'QoobRoom', desc: 'Живые стены у вас дома' }, { header: 'Wokit.ru', desc: 'Азиатская еда с удобной заставкой' }, { header: 'Швейная лавка', desc: 'Услуги по ремонту одежды' }]
-			ul.portfolio-list.clearfix
-				each project, index in projects
-					li.portfolio-item
-						.portfolio-item-cont
-							.portfolio-pict
-							.portfolio-desc
-								h2 #{project.header}
-								.desc #{project.desc}
-								a.proj-link(href="#")
-									Посмотреть проект
+		ul.portfolio-list.clearfix
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/tcafe.jpg);")
+					.portfolio-desc
+						h2 Infinity
+						.desc Роскошь во всех измерениях
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/zaycevo.jpg);")
+					.portfolio-desc
+						h2 St.Tropez
+						.desc Новый формат отдыха
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/tcafe.jpg);")
+					.portfolio-desc
+						h2 Даховская слобода
+						.desc Отдых в Адыгее
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/zaycevo.jpg);")
+					.portfolio-desc
+						h2 People-around.ru
+						.desc Создавать события — наша работа
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/tcafe.jpg);")
+					.portfolio-desc
+						h2 Солнечный
+						.desc Семейный загородный клуб
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/zaycevo.jpg);")
+					.portfolio-desc
+						h2 QoobRoom
+						.desc Живые стены у вас дома
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/tcafe.jpg);")
+					.portfolio-desc
+						h2 Wokit.ru
+						.desc Азиатская еда с удобной заставкой
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
+
+			li.portfolio-item
+				.portfolio-item-cont
+					.portfolio-pict(style="background-image: url(../images/portfolio/zaycevo.jpg);")
+					.portfolio-desc
+						h2 Швейная лавка
+						.desc Услуги по ремонту одежды
+						a.proj-link(href="#", data-text="Посмотреть проект")
+							Посмотреть проект
