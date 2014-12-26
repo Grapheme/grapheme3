@@ -9,11 +9,13 @@ block vars
 block content
   .main-screen
     .text-layer
-      .text-writing
+      each i in [1,2,3,4,5]
+        div(class="js-text item item-#{i}")
     .images-layer
-      .image-origami
+      each i in [1,2,3,4,5]
+        div(class="js-image item item-#{i}")
     .gradient-layer
-      .gradient-green
+        div(class="gradient-item")
     .info-layer
       include header
       .main-abs-info
