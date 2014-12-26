@@ -54,7 +54,7 @@
 
 			&:hover, &.active {
 				&:before {
-					border-color: #fff;
+					border-color: #3a3a3a;
 					transform: translateY(0);
 				}
 			}
@@ -88,7 +88,9 @@
 				color: #fff;
 
 				&:hover, &.active {
-					border-color: #fff;
+					&:before {
+						border-color: #fff;
+					}
 				}
 			}
 		}
