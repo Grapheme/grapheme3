@@ -1,5 +1,6 @@
 // bower:scss
 @import "../../bower_components/normalize-scss/_normalize.scss";
+@import "../../bower_components/bower-bourbon/_bourbon.scss";
 // endbower
 
 @import "common/vars";
@@ -12,3 +13,4 @@
 @import "includes/footer";
 
 @import "pages/index";
+@import "pages/regular";
