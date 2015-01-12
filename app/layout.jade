@@ -1,5 +1,6 @@
 doctype html
 - var show_header = true
+- var show_contacts = true
 - var show_footer = true
 - var header_class = ''
 - var footer_class = ''
@@ -28,6 +29,9 @@ html.no-js(lang="")
 
     if show_header
         include header
+
+    if show_contacts
+        include contacts  
 
     block content
 

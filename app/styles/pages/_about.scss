@@ -104,6 +104,10 @@
 		margin-left: 50%;
 	}
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	.prod-li-name {
 		margin: 0 0 16px;
 

@@ -40,6 +40,19 @@ grapheme.AnimImages = function(settings) {
 	}
 	showobj.start(settings);
 }
+grapheme.Contacts = function() {
+	var $parent = $('.block-contacts'),
+		$contBtn = $('.js-contacts'),
+		$closeBtn = $parent.find('.contacts-cross');
+
+	$contBtn.click( function(){
+		$parent.addClass('active');
+	});
+
+	$closeBtn.click( function(){
+		$parent.removeClass('active');
+	});
+}
 
 $(function(){
 	grapheme.AnimImages({
@@ -48,4 +61,5 @@ $(function(){
 		element: $('.js-text')
 	});
 	grapheme.AnimImages({});
+	grapheme.Contacts();
 });
