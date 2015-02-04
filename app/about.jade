@@ -2,6 +2,7 @@ extends layout
 
 block vars
   - var header_class = 'header-white'
+  - var page_class = 'about-page'
 
 block content
   .support
@@ -15,7 +16,7 @@ block content
 
   .block.white.col-2
       .wrapper
-        .row
+        .row.js-double-unit
           .unit 
             .p.
               Эффективный рабочий процесс предполагает полное взаимопонимание.
@@ -33,7 +34,7 @@ block content
   .block.grey.col-3.bordered.about
     .wrapper
       h2 Как мы обеспечиваем поддержку и развитие
-      .row
+      .row.js-triple-unit
         .unit
           h3 Веб-сайты и мобильные приложения
           p.
