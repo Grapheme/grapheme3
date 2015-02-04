@@ -80,6 +80,86 @@ grapheme.Animsition = function(){
 	  	});
 	});
 }
+grapheme.Appear = function(){
+	//Appeat animations for about page
+	var aboutAnimation = (function(){
+
+		var $parent = $('body.about-page');
+
+		var $elements = {
+			teaser: $parent.find('.teaser p'),
+			page_desc: $parent.find('.js-double-unit .unit'),
+			support_desc: $parent.find('.js-triple-unit .unit'),
+			product_items: $parent.find('.prods-li'),
+			partners: $parent.find('.wrapper.partners .unit'),
+			clients: $parent.find('.clients-li')
+		}
+		//Animations
+		var tl1 = new TimelineMax({ paused: true });
+  	 		tl1.staggerFromTo( $elements.teaser, 1, {x: '100%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
+
+  	 	var tl2 = new TimelineMax({ paused: true });
+  	 		tl2.staggerFromTo( $elements.page_desc, 2, {x: '100%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
+
+  	 	var tl3 = new TimelineMax({ paused: true });
+  	 		tl3.fromTo( $('.js-about-areas h2'), .6, {scale: .5, opacity: '0'}, {scale: 1, opacity: '1', ease:Circ.easeOut} )
+  	 		   .staggerFromTo( $elements.support_desc, 1, {x: '100%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
+
+  	 	var tl4 = new TimelineMax({ paused: true });
+  	 		tl4.staggerFromTo( $elements.product_items, 2, {x: '100%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2);
+
+  	 	var tl5 = new TimelineMax({ paused: true });
+  	 		tl5.fromTo( $('.js-about-partners h2'), .6, {scale: .5, opacity: '0'}, {scale: 1, opacity: '1', ease:Circ.easeOut} )
+  	 		   .staggerFromTo( $elements.partners, 1, {x: '100%', opacity: '0'}, {x: '0%', opacity: '1', ease:Circ.easeOut}, 0.2)
+  	 		   .staggerFromTo( $('.partners-li'), 1, {scale: .5, opacity: '0'}, {scale: 1, opacity: '1', ease:Circ.easeOut}, 0.2 );
+
+  	 	var tl6 = new TimelineMax({ paused: true });
+  	 		tl5.staggerFromTo( $elements.clients, 1, {scale: .5, opacity: '0'}, {scale: 1, opacity: '1', ease:Circ.easeOut}, 0.2);
+
+  		var $containers = {
+  			main: $('.js-about-main'),
+  			desc: $('.js-about-desc'),
+  			areas: $('.js-about-areas'),
+  			prods: $('.js-about-prods'),
+  			partners: $('.js-about-partners'),
+  			clients: $('.js-about-clients')
+  		}
+  		//Init Appear for each container
+  		$containers.main.add($containers.desc).add($containers.areas).add($containers.prods).add($containers.partners).appear();
+      	
+		//Write appear rules for each elements
+		$containers.main.on('appear', function(event, $all_appeared_elements) {
+      		tl1.restart();
+      		$(this).off();
+    	});
+    	$containers.desc.on('appear', function(event, $all_appeared_elements) {
+      		setTimeout( function(){
+      			tl2.restart();
+      		}, 500);
+      		$(this).off();
+    	});
+    	$containers.areas.on('appear', function(event, $all_appeared_elements) {
+      		tl3.restart();
+      		$(this).off();
+    	});
+    	$containers.prods.on('appear', function(event, $all_appeared_elements) {
+      		tl4.restart();
+      		$(this).off();
+    	});
+    	$containers.partners.on('appear', function(event, $all_appeared_elements) {
+      		tl5.restart();
+      		$(this).off();
+    	});
+    	$containers.clients.on('appear', function(event, $all_appeared_elements) {
+      		tl6.restart();
+      		$(this).off();
+    	});
+
+    	//Awake appeat first time
+    	$('html').scroll();
+
+	})();
+}
 
 $(function(){
 	grapheme.AnimImages({
@@ -90,4 +170,5 @@ $(function(){
 	grapheme.AnimImages({});
 	grapheme.Contacts();
 	grapheme.Animsition();
+	grapheme.Appear();
 });

@@ -36,7 +36,8 @@ html.no-js(lang="")
     if show_contacts
         include contacts  
 
-    block content
+    .main-wrapper
+        block content
 
     if show_footer
         include footer
@@ -52,4 +53,5 @@ html.no-js(lang="")
     // endbuild
     // build:js scripts/main.js
     script(src="scripts/main.js")
+    script(src="scripts/plugins.js")
     // endbuild
