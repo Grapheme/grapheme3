@@ -1,3 +1,12 @@
+.about-page {
+
+	.support {
+
+		.top-caption {
+			background-image: url(../images/decor/dire.png);
+		}
+	}
+}
 .partners {
 	padding: 0 0 80px;
 
@@ -80,6 +89,9 @@
 	}
 }
 
+.prods-wrapper {
+	@include linear-gradient(45deg, #62bdcc, #61c5c3);
+}
 .prods-ul {
 	margin: 0;
 	padding: 0;

@@ -7,7 +7,6 @@
     "normalize-scss": "~3.0.2",
     "bower-bourbon": "~3.1.8",
     "animsition": "~3.4.3",
-    "gsap": "~1.15.1",
-    "appear": "~0.3.3"
+    "wowjs": "~1.0.3"
   }
 }
