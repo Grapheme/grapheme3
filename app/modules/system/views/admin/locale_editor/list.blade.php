@@ -231,8 +231,8 @@ foreach ($files as $dir => $dir_files) {
 
 
 @section('scripts')
-{{ HTML::script("js/vendor/jquery-form.min.js") }}
-{{ HTML::script("js/plugin/zeroclipboard/ZeroClipboard.min.js") }}
+{{ HTML::script("private/js/vendor/jquery-form.min.js") }}
+{{ HTML::script("private/js/plugin/zeroclipboard/ZeroClipboard.min.js") }}
 <script>
 
     /***************************************************************************/

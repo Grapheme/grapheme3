@@ -10,7 +10,7 @@ return array(
 	'use_scripts_local' => FALSE,
 	
 	'default_page_title' => 'GRAPHEME 3.0',
-	'template' => 'default',
+	'template' => 'site',
     'welcome_page_tpl' => 'templates.site.index', #'guests.welcome',
 
 
@@ -25,7 +25,6 @@ return array(
         'en' => 'English',
     ),
 	'locale' => 'ru',
-
 
 	'key' => 'TSHZVixcD1cLGLSTObouk6Tmo3ChmyxD',
 	'providers' => array(
@@ -108,6 +107,7 @@ return array(
 
 		'ImageManipulation' => 'Intervention\Image\Facades\Image',
         'SphinxSearch'    => 'Scalia\SphinxSearch\SphinxSearchFacade',
+        'StringView'      => 'sngrl\StringBladeCompiler\StringView',
         'Bugsnag'         => 'Bugsnag\BugsnagLaravel\BugsnagFacade',
 
         'Collection'      => 'Illuminate\Database\Eloquent\Collection',

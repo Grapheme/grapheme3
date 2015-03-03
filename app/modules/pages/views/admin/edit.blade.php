@@ -2,7 +2,7 @@
 
 
 @section('style')
-    {{ HTML::style('css/redactor.css') }}
+    {{ HTML::style('private/css/redactor.css') }}
 @stop
 
 
