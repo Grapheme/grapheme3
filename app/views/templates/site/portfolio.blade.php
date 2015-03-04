@@ -32,7 +32,7 @@ animsition
                             <h2>{{ $project->name }}</h2>
 
                             <div class="desc">{{ $project->slogan }}</div>
-                            <a href="{{ $project->site_url }}" data-text="{{ trans("interface.job.view") }}" class="proj-link">{{ trans("interface.job.view") }}</a>
+                            <a href="{{ $project->site_url }}" data-text="{{ trans("interface.job.view") }}" target="_blank" class="proj-link">{{ trans("interface.job.view") }}</a>
                         </div>
                     </div>
                 </li>
