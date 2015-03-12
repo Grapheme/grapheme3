@@ -1,7 +1,7 @@
 .top-caption {
   width: 100%;
   min-width: 872px;
-  height: 450px;
+  height: 375px;
   position: relative;
   text-align: center;
   background-position: center center;
@@ -21,7 +21,7 @@
     font-size: 30px;
     line-height: 45px;
     color: white;
-    margin-top: 146px;
+    margin-top: 75px;
   }
 }
 
@@ -116,7 +116,7 @@
   &.col-2 {
     .wrapper {
       .unit {
-        width: 475px;
+        width: 490px;
         margin: 0 15px;
         ul {
           color: #8371c9;
@@ -138,6 +138,7 @@
       margin-bottom: 0;
       li {
         color: #f6619c;
+        margin-bottom: 15px;
         span {
           color: #393939;
         }

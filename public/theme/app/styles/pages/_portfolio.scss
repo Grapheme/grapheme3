@@ -12,28 +12,28 @@
 	.portfolio-item-cont {
 		@include position(absolute, 0px 0px 0px 0px);
 		background: #666;
+		overflow: hidden;
 
 		&:hover {
 			.portfolio-pict {
-				background-size: auto 100%;
+				transform: scale(1);
 			}
 			.proj-link {
 				transform: translate(0, 0) scale(1);
 			}
-			.desc {
+			/* .desc {
 				opacity: 1;
 				transform: scale(1);
-			}
+			} */
 		}
 	}
 	.portfolio-pict {
-		transition: all .4s ease;
-
 		@include position(absolute, 0px 0px 0px 0px);
+		transition: all .4s ease;
+		transform: scale(1.1);
 		z-index: 0;
-		background: url(../images/portfolio/tcafe.jpg);
-		background-size: auto 120%;
 		background-position: center center;
+		background-size: cover;
 	}
 	.portfolio-desc {
 		overflow: hidden;
@@ -54,10 +54,9 @@
 			cursor: default;
 		}
 		.desc {
-			opacity: 0;
-			transform: scale(.8);
-
-			transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+			//opacity: 0;
+			//transform: scale(.8);
+			//transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
 			height: 100%;
 			font-size: 40px;
 			line-height: 48px;

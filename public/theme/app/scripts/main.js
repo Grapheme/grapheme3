@@ -44,7 +44,8 @@ grapheme.Contacts = function() {
 	var $parent = $('.block-contacts'),
 		$contBtn = $('.js-contacts'),
 		$closeBtn = $parent.find('.contacts-cross'),
-		$body = $('body');
+		$body = $('body'),
+		$self = this;
 
 	$contBtn.click( function(){
 		$body.addClass('contacts-active');
@@ -52,7 +53,19 @@ grapheme.Contacts = function() {
 
 	$closeBtn.click( function(){
 		$body.removeClass('contacts-active');
+		window.location.hash = '';
 	});
+
+	$(window).on('hashchange', function(){
+		$self.hashShow();
+	});
+	this.hashShow = function() {
+		console.log(window.location.hash.substring(1));
+		if(window.location.hash.substring(1) == 'show-contacts'){
+			$body.addClass('contacts-active');
+		}
+	}
+	$self.hashShow();
 }
 grapheme.Animsition = function(){
 	$(document).ready(function() {  
