@@ -1,0 +1,56 @@
+doctype html
+- var show_header = true
+- var show_contacts = true
+- var show_footer = true
+- var header_class = ''
+- var footer_class = ''
+- var title = 'Grapheme'
+- var page_class = ''
+
+block vars 
+    
+html.no-js(lang="")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    title #{title}
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='../bower_components/animsition/dist/css/animsition.css')
+    link(rel='stylesheet', href='../bower_components/animsition/dist/css/animsition.min.css')
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel="stylesheet", href="styles/main.css")
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    script(src="../bower_components/modernizr/modernizr.js")
+    // endbuild
+  body(class="animsition #{page_class}")
+
+    if show_header
+        include header
+
+    if show_contacts
+        include contacts  
+
+    .main-wrapper
+        block content
+
+    if show_footer
+        include footer
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='../bower_components/animsition/dist/js/jquery.animsition.js')
+    script(src='../bower_components/animsition/dist/js/jquery.animsition.min.js')
+    script(src='../bower_components/wowjs/dist/wow.js')
+    // endbower
+    // endbuild
+    // build:js scripts/main.js
+    script(src="scripts/main.js")
+    script(src="scripts/plugins.js")
+    // endbuild

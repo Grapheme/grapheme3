@@ -1,0 +1,22 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-family: 'museo_sans_cyrl';
+	font-weight: 500;
+}
+
+body {
+  min-width: 1000px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+.main-wrapper {
+	overflow: hidden;
+}
