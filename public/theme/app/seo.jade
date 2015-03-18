@@ -72,6 +72,9 @@ block content
     .block.colorize
       p.
         Начните продвижение вашего сайта уже сегодня!
+      p.btn-cont
+        a(data-scrollTo="applyform" href="#").js-scrollTo.hover-btn
+          span Оставить заявку
     .block.plain-text
       .wrapper
         h2 Сколько стоит поисковая оптимизация
@@ -148,3 +151,51 @@ block content
             Мы&nbsp;хотим, чтобы между нами и&nbsp;клиентом не&nbsp;оставалось
             недосказанностей и&nbsp;на&nbsp;каждый возникающий вопрос
             вы&nbsp;получали своевременный ответ.
+    .block.grey.apply-cont(data-scrollName="applyform")
+      .wrapper
+        h2 Форма заявки
+        p.sub-header Заполните форму заявки — мы свяжемся с вами в течение двух рабочих часов.
+        form(id="applyform" action="json/test.json").apply-form
+          .apply-table
+            .table-row
+              .table-col Представтесь
+              .table-col
+                input(name="name").us-input
+            .table-row
+              .table-col Контактный телефон
+              .table-col
+                input(name="").us-input
+            .table-row
+              .table-col Электронная почта
+              .table-col
+                input(name="email").us-input
+            .table-row
+              .table-col Адрес вашего сайта
+              .table-col
+                input(name="").us-input
+            .table-row
+              .table-col Выберите набор услуг
+              .table-col
+                - var servs = ['Продвижение сайта','Контекстная реклама','Рекалама в социальных сетях (SMM)','Медийная реклама','Управление репутацией, SERM','Продвижение мобильных приложений','Юзабилити','Копирайтинг','Аудит сайта','SEO-консалтинг','Не знаю, посоветуйте','Другое']
+                each serv, i in servs
+                  .check-cont
+                    input(type="checkbox" name="service" id="check-#{i}")
+                    label(for="check-#{i}")
+                      span #{serv}
+            .table-row
+              .table-col Ваши пожелания
+              .table-col
+                textarea(name="message" placeholder="Ключевые слова, сроки, способ связи с вами, регион оказания усуг и т.д.").us-input.js-auto
+            .table-row
+              .table-col Как вы узнали о нас
+              .table-col
+                select(name="howyouknow")
+                  option Не указано
+                  option 2
+            .table-row
+              .table-col 
+              .table-col
+                button(type="submit").hover-btn
+                  span Оставить заявку
+                .js-response-text.ajax-message
+        p(style="display: none;").sub-header.js-final-response

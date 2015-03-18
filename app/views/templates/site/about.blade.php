@@ -103,7 +103,7 @@ animsition about-page
             </div>
         </div>
         <div class="block grey col-3 bordered clients">
-            <div class="wrapper wow fadeInUp">
+            <div class="wow fadeInUp">
                 <h2>{{ $page->block('clients_title_block') }}</h2>
                 <?php
                 $clients = Dictionary::valuesBySlug('clients');
