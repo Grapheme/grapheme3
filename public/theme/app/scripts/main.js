@@ -14,8 +14,8 @@ grapheme.scrollIt = function() {
         return false;
     });
 }
-grapheme.ApplyForm = function() {
-	var form = $('#applyform');
+grapheme.ApplyForms = function() {
+	var form = $('.js-apply-form');
 	form.find('[type="checkbox"]').button();
 	form.find('select').selectmenu();
 	jQuery.extend(jQuery.validator.messages, {
@@ -37,48 +37,50 @@ grapheme.ApplyForm = function() {
 	        max: jQuery.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
 	        min: jQuery.validator.format("Пожалуйста, введите число, большее или равное {0}.")
 	});
-	form.validate({
-        rules: {
-        	name: {
-        		required: true
-        	},
-            email: {
-            	required: true,
-            	email: true
-            }
-        },
-        submitHandler: function(form) {
-        	var response_cont = $('.js-response-text');
-        	var final_response = $('.js-final-response');
-        	console.log(final_response);
-        	var options = { 
-        	    beforeSubmit: function(){
-        	        response_cont.hide();
-        	        $(form).find('[type="submit"]').addClass('loading')
-        	            .attr('disabled', 'disabled');
-        	    }, 
-        	    success: function(data){
-        	        if(data.status && data.redirect && data.redirect != '') {
-        	            window.location.href = data.redirect;
-        	        }
-        	        if(data.responseText && !data.status) {
-        	            response_cont.show().text(data.responseText);
-        	        }
-        	        if(data.status) {
-        	        	$(form).slideUp();
-        	        	final_response.text(data.responseText).show();
-        	        }
-        	        $(form).find('[type="submit"]').removeClass('loading')
-        	            .removeAttr('disabled');
-        	    },
-        	    error: function(data) {
-        	        response_cont.show().text('Ошибка на сервере, попробуйте позже');
-        	        $(form).find('[type="submit"]').removeClass('loading')
-        	            .removeAttr('disabled');
-        	    }
-        	};
-            $(form).ajaxSubmit(options);
-        }
+    form.each(function(){
+            $(this).validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                submitHandler: function(form) {
+                    var response_cont = $(form).find('.js-response-text');
+                    var final_response = $(form).parent().find('.js-final-response');
+                    console.log(final_response);
+                    var options = { 
+                        beforeSubmit: function(){
+                            response_cont.hide();
+                            $(form).find('[type="submit"]').addClass('loading')
+                                .attr('disabled', 'disabled');
+                        }, 
+                        success: function(data){
+                            if(data.status && data.redirect && data.redirect != '') {
+                                window.location.href = data.redirect;
+                            }
+                            if(data.responseText && !data.status) {
+                                response_cont.show().text(data.responseText);
+                            }
+                            if(data.status) {
+                                $(form).slideUp();
+                                final_response.text(data.responseText).show();
+                            }
+                            $(form).find('[type="submit"]').removeClass('loading')
+                                .removeAttr('disabled');
+                        },
+                        error: function(data) {
+                            response_cont.show().text('Ошибка на сервере, попробуйте позже');
+                            $(form).find('[type="submit"]').removeClass('loading')
+                                .removeAttr('disabled');
+                        }
+                    };
+                    $(form).ajaxSubmit(options);
+                }
+            });
     });
 }
 grapheme.AnimImages = function(settings) {
@@ -196,6 +198,6 @@ $(function(){
 	grapheme.Contacts();
 	grapheme.Animsition();
 	grapheme.Appear();
-	grapheme.ApplyForm();
+	grapheme.ApplyForms();
     grapheme.scrollIt();
 });

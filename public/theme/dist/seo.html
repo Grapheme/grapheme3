@@ -159,24 +159,49 @@
         <div class="block grey plain-text">
           <div class="wrapper">
             <h2>Мы&nbsp;знаем особенности продвижения<br /> вашей сферы бизнеса</h2>
-            <p>У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.</p>
-            <p>Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.</p>
-            <ul>
-              <li><span>Интернет-магазины</span></li>
-              <li><span>Недвижимость</span></li>
-              <li><span>Все для ремонта</span></li>
-              <li><span>Мебель и предметы интерьера </span></li>
-              <li><span>Форекс и валютные операции </span></li>
-              <li><span>Химические средства</span></li>
-            </ul>
-            <ul>
-              <li><span>Строительные компании</span></li>
-              <li><span>Рестораны и загородные клубы</span></li>
-              <li><span>Одежда и товары для дома </span></li>
-              <li><span>Бизнес-центры и ТРК</span></li>
-              <li><span>Образовательные порталы</span></li>
-              <li><span>Отдых и туризм</span></li>
-            </ul>
+            <div class="seo-apply-left">
+              <p>У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.</p>
+              <p>Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.</p>
+              <ul>
+                <li><span>Интернет-магазины</span></li>
+                <li><span>Недвижимость</span></li>
+                <li><span>Все для ремонта</span></li>
+                <li><span>Мебель и предметы интерьера </span></li>
+                <li><span>Форекс и валютные операции </span></li>
+                <li><span>Химические средства</span></li>
+              </ul>
+              <ul>
+                <li><span>Строительные компании</span></li>
+                <li><span>Рестораны и загородные клубы</span></li>
+                <li><span>Одежда и товары для дома </span></li>
+                <li><span>Бизнес-центры и ТРК</span></li>
+                <li><span>Образовательные порталы</span></li>
+                <li><span>Отдых и туризм</span></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="seo-apply">
+              <div class="apply-title">Заполните заявку и получите комплексный аудит.</div>
+              <form id="#seo-apply" action="json/test.json" class="js-apply-form seo-form">
+                <div class="input-cont">
+                  <input name="name" placeholder="Представтесь" class="us-input">
+                </div>
+                <div class="input-cont">
+                  <input name="" placeholder="Контактный телефон" class="us-input">
+                </div>
+                <div class="input-cont">
+                  <input name="email" placeholder="Электронная почта" class="us-input">
+                </div>
+                <div class="input-cont">
+                  <input name="" placeholder="Адрес вашего сайта" class="us-input">
+                </div>
+                <div class="input-cont">
+                  <button type="submit" class="hover-btn"><span>Оставить заявку</span></button>
+                  <div class="js-response-text ajax-message"></div>
+                </div>
+              </form>
+              <p style="display: none;" class="js-final-response"></p>
+            </div>
             <div class="clearfix"></div>
           </div>
         </div>
@@ -206,7 +231,7 @@
           <div class="wrapper">
             <h2>Форма заявки</h2>
             <p class="sub-header">Заполните форму заявки — мы свяжемся с вами в течение двух рабочих часов.</p>
-            <form id="applyform" action="json/test.json" class="apply-form">
+            <form id="applyform" action="json/test.json" class="js-apply-form apply-form">
               <div class="apply-table">
                 <div class="table-row">
                   <div class="table-col">Представтесь</div>

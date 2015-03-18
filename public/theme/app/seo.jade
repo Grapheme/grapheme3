@@ -102,36 +102,54 @@ block content
     .block.grey.plain-text
       .wrapper
         h2 Мы&nbsp;знаем особенности продвижения<br /> вашей сферы бизнеса
-        p.
-          У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.
-        p.
-          Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.
-        ul
-          li
-            span Интернет-магазины
-          li
-            span Недвижимость
-          li
-            span Все для ремонта
-          li
-            span Мебель и предметы интерьера 
-          li
-            span Форекс и валютные операции 
-          li
-            span Химические средства
-        ul
-          li
-            span Строительные компании
-          li
-            span Рестораны и загородные клубы
-          li
-            span Одежда и товары для дома 
-          li
-            span Бизнес-центры и ТРК
-          li
-            span Образовательные порталы
-          li
-            span Отдых и туризм
+        .seo-apply-left
+          p.
+            У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.
+          p.
+            Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.
+          ul
+            li
+              span Интернет-магазины
+            li
+              span Недвижимость
+            li
+              span Все для ремонта
+            li
+              span Мебель и предметы интерьера 
+            li
+              span Форекс и валютные операции 
+            li
+              span Химические средства
+          ul
+            li
+              span Строительные компании
+            li
+              span Рестораны и загородные клубы
+            li
+              span Одежда и товары для дома 
+            li
+              span Бизнес-центры и ТРК
+            li
+              span Образовательные порталы
+            li
+              span Отдых и туризм
+          .clearfix
+        .seo-apply
+          .apply-title Заполните заявку и получите комплексный аудит.
+          form.js-apply-form(class="seo-form" id="#seo-apply" action="json/test.json")
+            .input-cont
+              input(name="name" placeholder="Представтесь").us-input
+            .input-cont
+              input(name="" placeholder="Контактный телефон").us-input
+            .input-cont
+              input(name="email" placeholder="Электронная почта").us-input
+            .input-cont
+              input(name="" placeholder="Адрес вашего сайта").us-input
+            .input-cont
+              button(type="submit").hover-btn
+                span Оставить заявку
+              .js-response-text.ajax-message
+          p(style="display: none;").js-final-response
         .clearfix
     .block.plain-text
       .wrapper
@@ -155,7 +173,7 @@ block content
       .wrapper
         h2 Форма заявки
         p.sub-header Заполните форму заявки — мы свяжемся с вами в течение двух рабочих часов.
-        form(id="applyform" action="json/test.json").apply-form
+        form.js-apply-form(id="applyform" action="json/test.json").apply-form
           .apply-table
             .table-row
               .table-col Представтесь
