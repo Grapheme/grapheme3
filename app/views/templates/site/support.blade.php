@@ -56,6 +56,7 @@
             </div>
             <div class="block colorize">
                 {{ $page->block('self-confidence') }}
+                <p class="btn-cont"><a data-scrollTo="applyform" href="#" class="js-scrollTo hover-btn"><span>Оставить заявку</span></a></p>
             </div>
             <div class="block white col-3">
                 <div class="wrapper">
@@ -73,6 +74,7 @@
                     </div>
                 </div>
             </div>
+            @include(Helper::layout('apply-form'))
         </div>
     </div>
     @include(Helper::layout('footer'),array('footer_class'=>''))

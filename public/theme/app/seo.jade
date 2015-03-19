@@ -72,6 +72,9 @@ block content
     .block.colorize
       p.
         Начните продвижение вашего сайта уже сегодня!
+      p.btn-cont
+        a(data-scrollTo="applyform" href="#").js-scrollTo.hover-btn
+          span Оставить заявку
     .block.plain-text
       .wrapper
         h2 Сколько стоит поисковая оптимизация
@@ -99,36 +102,54 @@ block content
     .block.grey.plain-text
       .wrapper
         h2 Мы&nbsp;знаем особенности продвижения<br /> вашей сферы бизнеса
-        p.
-          У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.
-        p.
-          Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.
-        ul
-          li
-            span Интернет-магазины
-          li
-            span Недвижимость
-          li
-            span Все для ремонта
-          li
-            span Мебель и предметы интерьера 
-          li
-            span Форекс и валютные операции 
-          li
-            span Химические средства
-        ul
-          li
-            span Строительные компании
-          li
-            span Рестораны и загородные клубы
-          li
-            span Одежда и товары для дома 
-          li
-            span Бизнес-центры и ТРК
-          li
-            span Образовательные порталы
-          li
-            span Отдых и туризм
+        .seo-apply-left
+          p.
+            У&nbsp;нас есть опыт продвижения сайтов в&nbsp;различных сегментах рынка и&nbsp;маркетинговые аудиты.
+          p.
+            Это значит, что мы&nbsp;уже хорошо знакомы с&nbsp;рыночной ситуацией и&nbsp;знаем ваших конкурентов: их&nbsp;стратегии, посещаемость, ключевые запросы, рекламную активность и&nbsp;бюджеты в&nbsp;различных сферах. А&nbsp;уже это поможет выстроить нашу собственную стратегию так, чтобы учесть все нюансы и&nbsp;расставить акценты правильно.
+          ul
+            li
+              span Интернет-магазины
+            li
+              span Недвижимость
+            li
+              span Все для ремонта
+            li
+              span Мебель и предметы интерьера 
+            li
+              span Форекс и валютные операции 
+            li
+              span Химические средства
+          ul
+            li
+              span Строительные компании
+            li
+              span Рестораны и загородные клубы
+            li
+              span Одежда и товары для дома 
+            li
+              span Бизнес-центры и ТРК
+            li
+              span Образовательные порталы
+            li
+              span Отдых и туризм
+          .clearfix
+        .seo-apply
+          .apply-title Заполните заявку и получите комплексный аудит.
+          form.js-apply-form(class="seo-form" id="#seo-apply" action="json/test.json")
+            .input-cont
+              input(name="name" placeholder="Представтесь").us-input
+            .input-cont
+              input(name="" placeholder="Контактный телефон").us-input
+            .input-cont
+              input(name="email" placeholder="Электронная почта").us-input
+            .input-cont
+              input(name="" placeholder="Адрес вашего сайта").us-input
+            .input-cont
+              button(type="submit").hover-btn
+                span Оставить заявку
+              .js-response-text.ajax-message
+          p(style="display: none;").js-final-response
         .clearfix
     .block.plain-text
       .wrapper
@@ -148,3 +169,51 @@ block content
             Мы&nbsp;хотим, чтобы между нами и&nbsp;клиентом не&nbsp;оставалось
             недосказанностей и&nbsp;на&nbsp;каждый возникающий вопрос
             вы&nbsp;получали своевременный ответ.
+    .block.grey.apply-cont(data-scrollName="applyform")
+      .wrapper
+        h2 Форма заявки
+        p.sub-header Заполните форму заявки — мы свяжемся с вами в течение двух рабочих часов.
+        form.js-apply-form(id="applyform" action="json/test.json").apply-form
+          .apply-table
+            .table-row
+              .table-col Представтесь
+              .table-col
+                input(name="name").us-input
+            .table-row
+              .table-col Контактный телефон
+              .table-col
+                input(name="").us-input
+            .table-row
+              .table-col Электронная почта
+              .table-col
+                input(name="email").us-input
+            .table-row
+              .table-col Адрес вашего сайта
+              .table-col
+                input(name="").us-input
+            .table-row
+              .table-col Выберите набор услуг
+              .table-col
+                - var servs = ['Продвижение сайта','Контекстная реклама','Рекалама в социальных сетях (SMM)','Медийная реклама','Управление репутацией, SERM','Продвижение мобильных приложений','Юзабилити','Копирайтинг','Аудит сайта','SEO-консалтинг','Не знаю, посоветуйте','Другое']
+                each serv, i in servs
+                  .check-cont
+                    input(type="checkbox" name="service" id="check-#{i}")
+                    label(for="check-#{i}")
+                      span #{serv}
+            .table-row
+              .table-col Ваши пожелания
+              .table-col
+                textarea(name="message" placeholder="Ключевые слова, сроки, способ связи с вами, регион оказания усуг и т.д.").us-input.js-auto
+            .table-row
+              .table-col Как вы узнали о нас
+              .table-col
+                select(name="howyouknow")
+                  option Не указано
+                  option 2
+            .table-row
+              .table-col 
+              .table-col
+                button(type="submit").hover-btn
+                  span Оставить заявку
+                .js-response-text.ajax-message
+        p(style="display: none;").sub-header.js-final-response
