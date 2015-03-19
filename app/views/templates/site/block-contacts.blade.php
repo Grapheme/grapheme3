@@ -4,7 +4,7 @@
  */
 
 $contacts = Dictionary::valuesBySlug('contacts');
-$contacts = DicLib::extracts($contacts, null, true, true);
+#$contacts = DicLib::extracts($contacts, null, true, true);
 Helper::ta($contacts);
 ?>
 <div class="block-contacts">
