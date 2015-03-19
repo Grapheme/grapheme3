@@ -2,9 +2,14 @@
 /**
  * TEMPLATE_IS_NOT_SETTABLE
  */
+
+$contacts = Dictionary::valuesBySlug('contacts');
+$contacts = DicLib::extracts($contacts, null, true, true);
+Helper::ta($contacts);
 ?>
 <div class="block-contacts">
     <div class="contacts-wrapper clearfix">
+
         <div class="address">
             <address>344006, Ростов-на-Дону, ул. Суворова 52а, офис 304</address>
             <a class="map-link">Как добраться?</a>
