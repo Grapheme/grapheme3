@@ -109,7 +109,7 @@
                     {{ $page->block('rabota-v-socsetyah-ext') }}
                 </div>
             </div>
-            @include(Helper::layout('apply-form'))
+            @include(Helper::layout('forms.apply-form'))
         </div>
     </div>
     @include(Helper::layout('footer'),array('footer_class'=>''))

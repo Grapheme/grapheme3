@@ -81,26 +81,9 @@
                 <div class="wrapper">
                     {{ $page->block('prodvijenie-sfery-biznesa') }}
                     <div class="seo-apply">
-                      <div class="apply-title">Заполните заявку и получите комплексный аудит.</div>
-                      <form id="#seo-apply" action="json/test.json" class="js-apply-form seo-form">
-                        <div class="input-cont">
-                          <input name="name" placeholder="Представтесь" class="us-input">
-                        </div>
-                        <div class="input-cont">
-                          <input name="" placeholder="Контактный телефон" class="us-input">
-                        </div>
-                        <div class="input-cont">
-                          <input name="email" placeholder="Электронная почта" class="us-input">
-                        </div>
-                        <div class="input-cont">
-                          <input name="" placeholder="Адрес вашего сайта" class="us-input">
-                        </div>
-                        <div class="input-cont">
-                          <button type="submit" class="hover-btn"><span>Оставить заявку</span></button>
-                          <div class="js-response-text ajax-message"></div>
-                        </div>
-                      </form>
-                      <p style="display: none;" class="js-final-response"></p>
+                        <div class="apply-title">Заполните заявку и получите комплексный аудит.</div>
+                        @include(Helper::layout('forms.apply-seo-form'))
+                        <p style="display: none;" class="js-final-response"></p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -114,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            @include(Helper::layout('apply-form'))
+            @include(Helper::layout('forms.apply-form'))
         </div>
     </div>
     @include(Helper::layout('footer'),array('footer_class'=>''))
