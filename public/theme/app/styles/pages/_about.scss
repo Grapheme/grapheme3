@@ -7,6 +7,11 @@
 		}
 	}
 }
+.p {
+	p {
+		margin: 0;
+	}
+}
 .partners {
 	padding: 0 0 80px;
 
@@ -22,13 +27,13 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-
-		margin: 2rem 0 0;
+		margin-left: 5rem;
 	}
 	.partners-li {
 		position: relative;
 		display: inline-block;
-		margin: 0 46px 0 0;
+		margin: 0 46px 26px 0 !important;
+		width: 120px;
 
 		img {
 			vertical-align: sub;
@@ -107,31 +112,30 @@
 	@include linear-gradient(45deg, #62bdcc, #61c5c3);
 }
 .prods-ul {
-	margin: 0;
+	margin: 0 0 -67px !important;
 	padding: 0;
 	list-style: none;
+	font-size: 0;
 }
 .prods-li {
-
 	box-sizing: border-box;
-
 	position: relative;
-	float: none;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 0 67px;
 	padding: 0 60px 0 140px;
+	width: 50%;
 
-	&:nth-child(2n-1) {
+	/* &:nth-child(2n-1) {
 		margin-right: 50%;
 	}
 
 	&:nth-child(2n) {
 		margin-left: 50%;
-	}
+	} */
 
 	&:last-child {
-		margin-bottom: 0;
+		//margin-bottom: 0;
 	}
 
 	.prod-li-name {

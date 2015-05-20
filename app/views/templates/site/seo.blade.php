@@ -17,7 +17,7 @@
         <div class="seo">
             <div class="top-caption">
                 <div class="bar"></div>
-                <div class="teaser">
+                <div class="teaser wow fadeInUp">
                     {{ $page->block('main_title') }}
                 </div>
             </div>
@@ -25,32 +25,32 @@
                 <div class="wrapper">
                     {{ $page->block('result-seo-title') }}
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('povyshenie-konversii') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('privlechenie-posetiteley') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             {{ $page->block('uluchshenie-raboty-sayta-i-otdela-prodaj') }}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="block grey col-2 bordered">
-                <div class="wrapper">
+                <div class="wrapper wow fadeIn">
                     <h2>{{ $page->block('zakaz-seo-u-nas') }}</h2>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('dumaem') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('tochno-znaem-chto-neobhodimo') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             {{ $page->block('cenim-vremya') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.45s" class="unit wow fadeInUp">
                             {{ $page->block('podderjivaem') }}
                         </div>
                         <div class="clrfx"></div>
@@ -58,13 +58,13 @@
                 </div>
             </div>
             <div class="block colorize">
-                {{ $page->block('prodvijenie-uje-segodnya') }}
-                <p class="btn-cont"><a href="#" data-scrollTo="applyform" class="hover-btn"><span>Оставить заявку</span></a></p>
+                <div class="wow fadeIn">{{ $page->block('prodvijenie-uje-segodnya') }}</div>
+                <p class="btn-cont wow fadeInUp"><a href="#" data-scrollTo="applyform" class="hover-btn"><span>Оставить заявку</span></a></p>
             </div>
             <div class="block plain-text">
                 <div class="wrapper">
-                    {{ $page->block('stoit-optimizaciya') }}
-                    <div class="teaser">
+                    <div class="wow fadeIn">{{ $page->block('stoit-optimizaciya') }}</div>
+                    <div class="teaser wow fadeInUp">
                         <div class="ico"><img src="/{{ Config::get('site.theme_path') }}/images/icons/wallet.png"></div>
                         <div class="info">
                             {{ $page->block('stoit-optimizaciya-desc') }}
@@ -79,8 +79,8 @@
             </div>
             <div class="block grey plain-text">
                 <div class="wrapper">
-                    {{ $page->block('prodvijenie-sfery-biznesa') }}
-                    <div class="seo-apply">
+                    <div class="wow fadeIn">{{ $page->block('prodvijenie-sfery-biznesa') }}</div>
+                    <div class="seo-apply wow fadeInUp">
                         <div class="apply-title">Заполните заявку и получите комплексный аудит.</div>
                         @include(Helper::layout('forms.apply-seo-form'))
                         <p style="display: none;" class="js-final-response"></p>
@@ -90,9 +90,9 @@
             </div>
             <div class="block plain-text">
                 <div class="wrapper">
-                    <h2>{{ $page->block('konkretnyy-rezult') }}</h2>
-                    <div class="garanty">{{ $page->block('garantiya-grafema') }}</div>
-                    <div class="info">
+                    <h2 class="wow fadeIn">{{ $page->block('konkretnyy-rezult') }}</h2>
+                    <div class="garanty wow fadeInUp">{{ $page->block('garantiya-grafema') }}</div>
+                    <div class="info wow fadeInUp">
                         {{ $page->block('konkretnyy-rezult-desc') }}
                     </div>
                 </div>

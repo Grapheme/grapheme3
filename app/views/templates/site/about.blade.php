@@ -65,7 +65,7 @@ animsition about-page
                 @if($capabilities->count())
                 <ul class="row prods-ul clearfix">
                     @foreach($capabilities as $capability)
-                    <li class="prods-li unit wow fadeInUp">
+                    <li class="prods-li wow fadeInUp">
                         <div class="prod-li-pict wow zoomIn" style="background-image: url({{ asset('uploads/galleries/'.$capability->background->name) }});"></div>
                         <div class="prod-li-cont">
                             <h4 data-wow-delay=".2s" class="prod-li-name wow fadeInDown">{{ $capability->title }}</h4>
