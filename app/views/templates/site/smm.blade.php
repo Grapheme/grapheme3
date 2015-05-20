@@ -17,17 +17,17 @@
         <div class="smm">
             <div class="top-caption">
                 <div class="bar"></div>
-                <div class="teaser">
+                <div class="teaser wow fadeInUp">
                     {{ $page->block('main_title') }}
                 </div>
             </div>
             <div class="block white col-2">
                 <div class="wrapper">
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('top_left_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('top_right_block') }}
                         </div>
                         <div class="clrfx"></div>
@@ -36,12 +36,12 @@
             </div>
             <div class="block grey col-2">
                 <div class="wrapper">
-                    <h2>{{ $page->block('rezultaty-smm') }}</h2>
+                    <h2 class="wow fadeIn">{{ $page->block('rezultaty-smm') }}</h2>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('rezultaty-smm-desc-left') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('rezultaty-smm-desc-right') }}
                         </div>
                         <div class="clrfx"></div>
@@ -49,30 +49,30 @@
                 </div>
             </div>
             <div class="block colorize">
-                {{ $page->block('medium_title_block') }}
-                <p class="btn-cont"><a data-scrollTo="applyform" href="#" class="js-scrollTo hover-btn"><span>Оставить заявку</span></a></p>
+                <div class="wow fadeIn">{{ $page->block('medium_title_block') }}</div>
+                <p class="btn-cont wow fadeInUp"><a data-scrollTo="applyform" href="#" class="js-scrollTo hover-btn"><span>Оставить заявку</span></a></p>
             </div>
             <div class="block white col-5">
                 <div class="wrapper">
-                    <h2>{{ $page->block('etapy-raboty') }}</h2>
+                    <h2 class="wow fadeIn">{{ $page->block('etapy-raboty') }}</h2>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             <div class="num">1</div>
                             {{ $page->block('analitika') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             <div class="num">2</div>
                             {{ $page->block('planirovanie') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             <div class="num">3</div>
                             {{ $page->block('proizvodstvo') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.45s" class="unit wow fadeInUp">
                             <div class="num">4</div>
                             {{ $page->block('publikaciya') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.6s" class="unit wow fadeInUp">
                             <div class="num">5</div>
                             {{ $page->block('podderjka-brenda-v-socsetyah') }}
                         </div>
@@ -82,15 +82,15 @@
             </div>
             <div class="block grey col-3">
                 <div class="wrapper">
-                    <h2>{{ $page->block('doverit-smm-nam') }}</h2>
+                    <h2 class="wow fadeInUp">{{ $page->block('doverit-smm-nam') }}</h2>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('strategiya') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('opyt') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             {{ $page->block('vnimanie') }}
                         </div>
                     </div>
@@ -98,15 +98,15 @@
             </div>
             <div class="block plain-text">
                 <div class="wrapper">
-                    {{ $page->block('rabota-v-socsetyah') }}
-                    <div class="teaser">
+                    <div class="wow fadeInUp">{{ $page->block('rabota-v-socsetyah') }}</div>
+                    <div class="teaser wow fadeInUp">
                         <div class="ico"><img src="/{{ Config::get('site.theme_path') }}/images/icons/wallet-purple.png"></div>
                         <div class="info">
                             {{ $page->block('tipichnyy-proekt-po-smm') }}
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    {{ $page->block('rabota-v-socsetyah-ext') }}
+                    <div class="wow fadeInUp">{{ $page->block('rabota-v-socsetyah-ext') }}</div>
                 </div>
             </div>
             @include(Helper::layout('forms.apply-form'))

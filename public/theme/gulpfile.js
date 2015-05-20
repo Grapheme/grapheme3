@@ -17,8 +17,9 @@ gulp.task('styles', function () {
       style: 'expanded',
       precision: 10
     }))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
-    .pipe(gulp.dest('.tmp/styles'));
+    .pipe($.autoprefixer({browsers: ['last 5 version']}))
+    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('dist/styles'));
 });
 
 // gulp.task('jshint', function () {

@@ -17,17 +17,17 @@
         <div class="support">
             <div class="top-caption">
                 <div class="bar"></div>
-                <div class="teaser">
+                <div class="teaser wow fadeInUp">
                     {{ $page->block('main_title') }}
                 </div>
             </div>
-            <div class="block white col-2">
+            <div class="block white col-2 wow fadeInUp">
                 <div class="wrapper">
                     <div class="row">
                         <div class="unit">
                             {{ $page->block('top_left_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit">
                             {{ $page->block('top_right_block') }}
                         </div>
                         <div class="clrfx"></div>
@@ -36,18 +36,20 @@
             </div>
             <div class="block grey col-2 bordered">
                 <div class="wrapper">
-                    {{ $page->block('medium_title_block') }}
+                    <div class="wow fadeIn">
+                        {{ $page->block('medium_title_block') }}
+                    </div>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('medium_first_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('medium_second_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             {{ $page->block('medium_third_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.45s" class="unit wow fadeInUp">
                             {{ $page->block('medium_four_block') }}
                         </div>
                         <div class="clrfx"></div>
@@ -55,20 +57,22 @@
                 </div>
             </div>
             <div class="block colorize">
-                {{ $page->block('self-confidence') }}
-                <p class="btn-cont"><a data-scrollTo="applyform" href="#" class="js-scrollTo hover-btn"><span>Оставить заявку</span></a></p>
+                <div class="wow fadeIn">
+                    {{ $page->block('self-confidence') }}
+                </div>
+                <p class="btn-cont wow fadeInUp"><a data-scrollTo="applyform" href="#" class="js-scrollTo hover-btn"><span>Оставить заявку</span></a></p>
             </div>
             <div class="block white col-3">
                 <div class="wrapper">
-                    <h2>{{ $page->block('bottom_title_block') }}</h2>
+                    <h2 class="wow fadeIn">{{ $page->block('bottom_title_block') }}</h2>
                     <div class="row">
-                        <div class="unit">
+                        <div class="unit wow fadeInUp">
                             {{ $page->block('bottom_first_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.15s" class="unit wow fadeInUp">
                             {{ $page->block('bottom_second_block') }}
                         </div>
-                        <div class="unit">
+                        <div data-wow-delay="0.3s" class="unit wow fadeInUp">
                             {{ $page->block('bottom_third_block') }}
                         </div>
                     </div>
