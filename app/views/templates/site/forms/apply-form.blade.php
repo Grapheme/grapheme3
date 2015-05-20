@@ -48,7 +48,7 @@
                             <input type="checkbox" name="service[]" value="Рекалама в социальных сетях (SMM)" id="check-2">
                             <label for="check-2"><span>Рекалама в социальных сетях (SMM)</span></label>
                         </div>
-                        <div class="check-cont">
+                        <!--<div class="check-cont">
                             <input type="checkbox" name="service[]" value="Медийная реклама" id="check-3">
                             <label for="check-3"><span>Медийная реклама</span></label>
                         </div>
@@ -59,7 +59,7 @@
                         <div class="check-cont">
                             <input type="checkbox" name="service[]" value="Продвижение мобильных приложений" id="check-5">
                             <label for="check-5"><span>Продвижение мобильных приложений</span></label>
-                        </div>
+                        </div>-->
                         <div class="check-cont">
                             <input type="checkbox" name="service[]" value="Юзабилити" id="check-6">
                             <label for="check-6"><span>Юзабилити</span></label>
@@ -99,7 +99,9 @@
                     <div class="table-col">
                         <select name="howyouknow">
                             <option value="Не указано">Не указано</option>
-                            <option value="От друзей">От друзей</option>
+                            <option value="В Интернете">В Интернете</option>
+                            <option value="По рекомендации">По рекомендации</option>
+                            <option value="На конференции">На конференции</option>
                         </select>
                     </div>
                 </div>
