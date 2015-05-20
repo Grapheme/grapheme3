@@ -6042,7 +6042,9 @@ body.contacts-active {
           transition: all .4s ease;
   font-weight: 300;
   border-bottom: 1px solid;
+  color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 .block-contacts .address .map-link:hover {
   border-color: transparent;
